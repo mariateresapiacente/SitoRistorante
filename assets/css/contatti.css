@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #f8f8f8;
     color: #333;
+    background-image: url(/assets/img/Immagine4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
   }
   
   header {
