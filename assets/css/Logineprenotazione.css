@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    background-image: url(/SitoRistorante-main/assets/img/Immagine4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px  #0f3e3e;
+    border:3px solid #0f3e3e; /* Aggiunto bordo */
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group button {
+    padding: 10px 20px;
+    background-color:  #0f3e3e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .form-group button:hover {
+    background-color: #0f3e3e;
+  }
+
+  footer {
+    background-color: #0f3e3e;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }

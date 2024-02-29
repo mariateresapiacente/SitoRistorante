@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #f8f8f8;
     color: #333;
-    background-image: url(/assets/img/Immagine4.jpg);
+    background-image: url(/SitoRistorante-main/assets/img/Immagine4.jpg);
     background-repeat: no-repeat;
     background-size: cover
   }
@@ -25,6 +25,8 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(15, 62, 62);
+    border:3px solid #0f3e3e;
   }
   
   .map {
@@ -39,6 +41,8 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #0f3e3e;
+    border:3px solid #0f3e3e;
   }
   
   label {
@@ -54,7 +58,7 @@ body {
   }
   
   button {
-    background-color: #4CAF50;
+    background-color:#0f3e3e;
     color: white;
     padding: 10px;
     border: none;
