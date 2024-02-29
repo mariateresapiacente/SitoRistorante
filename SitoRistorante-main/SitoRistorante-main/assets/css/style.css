@@ -1,0 +1,180 @@
+.Welcome {
+    background-color: rgba(210, 199, 199, 0.8); /* Colore di sfondo con trasparenza */
+    padding: 20px; /* Spaziatura interna */
+    text-align: center; /* Allineamento del testo al centro */
+    size: 30px;
+    color: #0f3e3e;
+    top: 20;
+    
+}
+
+
+.WelcomeBG {
+    background-image: url('../img/Immagine4.jpg'); /* Imposta l'immagine di sfondo */
+    background-size: cover; /* Copri l'intera area di .WelcomeBG */
+    background-position: center; /* Centra l'immagine */
+    background-repeat: no-repeat; /* Non ripetere l'immagine */
+    height: 100vh; /* Altezza uguale all'altezza della finestra del browser */
+    display: flex; /* Utilizza il layout flexbox */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.menu {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(251, 251, 251, 0.1);
+} 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(252, 252, 252);
+    background-image: url(/SitoRistorante-main/assets/img/Immagine4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.underline {
+    margin: 0 auto;
+    width: 70px;
+    height: 5px;
+    background-color:rgb(15, 62, 62);
+}
+
+.menu-items {
+    /* max-width: 1770px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card {
+    min-width: 600px;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    background: none;
+}
+
+.card-body {
+    padding: 0;
+    padding: 0px 20px;
+    border-color:#0f3e3e;
+
+}
+
+.card img {
+    width: 267px;
+    height: 167px;
+    border-color:#0f3e3e;
+    background-color:#0f3e3e;
+    border-color:#0f3e3e;
+
+}
+
+@media only screen and (max-width: 780px) and (min-width:590px) {
+    .card {
+        padding: 10px 100px;
+        /* border: 2px solid black; */
+        /* max-width: 700px; */
+        width: 90%;
+        margin: 0 auto;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    .card img {
+        width: 100%;
+        height: 200px;
+        /* width: 400px;
+        height: 200px; */
+        margin: 0 auto;
+        /* min-width: none; */
+    }
+    .card-body {
+        padding: 0;
+    }
+    .card-title {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width:780px) {
+    .card {
+        padding: 10px 10px;
+        max-width: 700px;
+    }
+    .menu-items {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    /* .container {
+        width: 50%;
+    } */
+    .card {
+        padding: 1em 8em;
+    }
+    .card img {
+        width: 100%;
+    }
+    .card-body {
+        padding: 0;
+    }
+    .card-title {
+        margin-top: 20px;
+    }
+}
+
+.card-title {
+    width: 100%;
+    border-bottom: 1px dotted  #0f3e3e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title h5,
+.price {
+    letter-spacing: 2px;
+}
+
+.card-text {
+    color:#0f3e3e;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+}
+
+/* Stile del contenuto */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fcfbfb;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgb(15, 62, 62);
+}
+
+footer {
+    background-color: #0f3e3e;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
+
+  header {
+    background-color: #0f3e3e;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-style: initial;
+  }
