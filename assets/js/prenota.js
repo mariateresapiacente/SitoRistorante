@@ -1,30 +1,56 @@
-function verificaDisponibilita() {
+class Prenotazione {
+    constructor(data, orario, numeroPersone) {
+      this.data = data;
+      this.orario = orario;
+      this.numeroPersone = numeroPersone;
+    }
+  
+    salva() {
+      // Ottieni le prenotazioni esistenti dal localStorage
+      let prenotazioni = JSON.parse(localStorage.getItem("prenotazioni")) || [];
+  
+      // Aggiungi la nuova prenotazione
+      prenotazioni.push({
+        data: this.data,
+        orario: this.orario,
+        numeroPersone: this.numeroPersone,
+      });
+  
+      // Salva le prenotazioni aggiornate nel localStorage
+      localStorage.setItem("prenotazioni", JSON.stringify(prenotazioni));
+    }
+  }
+  
+  function prenota() {
+    // Ottieni i valori inseriti dall'utente
     var data = document.getElementById("datePicker").value;
     var orario = document.getElementById("timeSlot").value;
     var numeroPersone = document.getElementById("numberOfPeople").value;
-
-    // Definisci gli orari disponibili per ciascun giorno della settimana
-    const orariDisponibili = {
-        Lunedi: ["12:00", "13:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
-        Martedi: [],
-        Mercoledi: ["12:00", "13:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
-        Giovedi: ["12:00", "13:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
-        Venerdi: [],
-        Sabato: ["12:00", "13:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
-        Domenica: ["12:00", "13:00", "18:00", "19:00", "20:00", "21:00", "22:00"]
-    };
-
-    // Ottieni il giorno della settimana dalla data fornita
-    const giorno = new Date(data).toLocaleDateString('it-ITA', { weekday: 'long' });
-
-    // Controlla se l'orario è presente negli orari disponibili per il giorno specificato
-    if (orariDisponibili[giorno].includes(orario)) {
-        // Orario disponibile
-        alert("Prenotazione confermata per il " + data + " alle " + orario + " per " + numberOfPeople + " persone.");
-    } else {
-        // Orario non disponibile
-        alert("L'orario selezionato non è disponibile per la prenotazione. Si prega di selezionare un altro orario.");
+  
+    // Verifica che tutti i campi siano stati compilati
+    if (data === "" || orario === "" || numeroPersone === "") {
+      alert("Per favore, compila tutti i campi.");
+      return;
     }
-}
-
-verificaDisponibilita();
+  
+    // Verifica che il numero di persone sia compreso tra 1 e 10
+    if (numeroPersone < 1 || numeroPersone > 10) {
+      alert("Il numero di persone deve essere compreso tra 1 e 10.");
+      return;
+    }
+  
+    // Crea un nuovo oggetto Prenotazione
+    var nuovaPrenotazione = new Prenotazione(data, orario, numeroPersone);
+  
+    // Salva la prenotazione nel localStorage
+    nuovaPrenotazione.salva();
+  
+    // Visualizza un messaggio di conferma
+    alert("Prenotazione effettuata con successo!");
+  
+    // Pulisci i campi di input
+    document.getElementById("datePicker").value = "";
+    document.getElementById("timeSlot").value = "";
+    document.getElementById("numberOfPeople").value = "";
+  }
+  
