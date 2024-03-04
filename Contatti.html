@@ -65,20 +65,31 @@
       </section>
 
       <section class="contact-form">
-        <h2>Invia Feedback</h2>
-        <form>
-          <label for="name">Nome:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="message">Messaggio:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Invia</button>
+        <h2>Lascia una Recensione</h2>
+        <form id="recensione-form" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Recensione:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <label for="valutazione">Valutazione:</label>
+            <select id="valutazione" name="valutazione" required>
+                <option value="">Seleziona una valutazione</option>
+                <option value="1">1 stella</option>
+                <option value="2">2 stelle</option>
+                <option value="3">3 stelle</option>
+                <option value="4">4 stelle</option>
+                <option value="5">5 stelle</option>
+            </select>
+    
+            <button type="submit">Invia Recensione</button>
+            <script src="/assets/js/recensioni.js"></script>
         </form>
-      </section>
+    </section>
     <footer>
       <p>&copy; 2024 Ristorante Bistrot. Tutti i diritti riservati.</p>
     </footer>

@@ -66,8 +66,7 @@ footer {
     text-align: center;
     padding: 1em;
   }
-   
- /* Animazione per l'intestazione */
+
 /* Animazione fadeIn */
 @keyframes fadeIn {
     from {
