@@ -26,3 +26,5 @@ function verificaDisponibilita() {
         alert("L'orario selezionato non è disponibile per la prenotazione. Si prega di selezionare un altro orario.");
     }
 }
+
+verificaDisponibilita();
