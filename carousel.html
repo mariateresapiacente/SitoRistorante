@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        .carousel-container {
+            width: 500%;
+            height: 500%;
+            overflow: hidden;
+            position: relative;;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .carousel {
+            display:flex;
+            transition: transform 0.4s ease-in-out;
+            animation: slide 7s infinite;
+        }
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        .carousel-button-left {
+            left: 0;
+        }
+        .carousel-button-right {
+            right: 0;
+        }
+        @keyframes slide {
+            0% {
+        transform: translateX(0);
+             }
+         100% {
+        transform: translateX(-80%);
+                }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="/assets/img/carosello1.jpg" alt="Image 1">
+            <img src="/assets/img/insalata di mare.jpg" alt="Image 2">
+            <img src="/assets/img/carosello3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 1;
+        const carousel = document.querySelector('.carousel');
+        const images = carousel.querySelectorAll('img');
+        const totalImages = images.length;
+
+        function moveCarousel(direction) {
+            currentIndex = (currentIndex + direction + totalImages) % totalImages;
+            const offset = -currentIndex * 90;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
