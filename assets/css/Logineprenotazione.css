@@ -62,5 +62,20 @@ body {
     background-color: #0f3e3e;
     color: white;
     text-align: center;
-    padding: 4%;
+    padding: 3%;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Applica l'animazione fadeIn al body */
+  body {
+    animation: fadeIn 1s ease-out;
   }

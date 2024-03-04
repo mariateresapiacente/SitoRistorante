@@ -20,15 +20,14 @@ header {
 
 /* Stile del contenuto */
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgb(15, 62, 62);
-    font-family: 'Arial', sans-serif;
-    border: 8px solid #0f3e3e;
-      padding: 20px
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px; /* Rimuovi questa riga */
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgb(15, 62, 62);
+        font-family: 'Arial', sans-serif;
+        border: 8px solid #0f3e3e;
 }
 
 /* Stile della tabella */
@@ -68,4 +67,20 @@ footer {
     padding: 1em;
   }
    
- 
+ /* Animazione per l'intestazione */
+/* Animazione fadeIn */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Applica l'animazione fadeIn al body */
+  body {
+    animation: fadeIn 1s ease-out;
+  }

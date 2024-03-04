@@ -47,7 +47,7 @@ class Prenotazione {
   
     // Visualizza un messaggio di conferma
     alert("Prenotazione effettuata con successo!");
-  
+    window.location.href = "index.html";
     // Pulisci i campi di input
     document.getElementById("datePicker").value = "";
     document.getElementById("timeSlot").value = "";
