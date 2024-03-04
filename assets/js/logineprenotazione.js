@@ -1,24 +1,30 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('login-form');
-    const registerLink = document.getElementById('register-link');
-    const bookingForm = document.getElementById('booking-form');
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+  
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+  
+    // Recupero delle credenziali memorizzate nel localStorage
+    var storedUsername = localStorage.getItem("username");
+    var storedPassword = localStorage.getItem("password");
+  
+    // Verifica delle credenziali
+    if (username === storedUsername && password === storedPassword) {
+      // Alert per confermare il login
+      alert("Login effettuato con successo!");
 
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        // Qui inserisci la logica per verificare le credenziali
-        if (username === 'admin' && password === 'password123') {
-            // Le credenziali sono corrette, consenti l'accesso
-            alert('Accesso riuscito!');
-        } else {
-            // Le credenziali sono errate, informa l'utente
-            alert('Credenziali non valide. Riprova.');
-        }
-    });
-
-    registerLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        alert('Funzionalità di registrazione non implementata.');
-    });
-});
+      window.location.href="prenota.html";
+  
+      // Esempio di utilizzo dei dati memorizzati
+      console.log("Dati memorizzati durante la registrazione:");
+      console.log("Username:", storedUsername);
+      console.log("Password:", storedPassword);
+    } else {
+      // Alert se le credenziali non sono corrette
+      alert("Credenziali non valide. Riprova.");
+    }
+  
+    // Reset dei campi del form
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+  });
