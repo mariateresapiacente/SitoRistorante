@@ -46,6 +46,22 @@ footer {
     border-radius: 4px;
     cursor: pointer;
   }
+  .navbar {
+    z-index: 1000; /* o un valore superiore se necessario */
+    background-color: rgba(214, 218, 221, 0.8)
+    
+  }
+  .navbar .nav-link {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar .nav-link:hover {
+    background-color: #8ca4a4;
+  }
+  
+  .navbar .nav-link:focus {
+    background-color:  #8ca4a4;
+  }
   
   /* Animazione fadeIn */
 @keyframes fadeIn {

@@ -10,14 +10,15 @@ body {
   }
   
 .container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgb(15, 62, 62);
-    border:3px solid #0f3e3e;
-  }
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgb(15, 62, 62);
+  border:3px solid #0f3e3e;
+};
   
   h2 {
     text-align: center;
@@ -44,4 +45,42 @@ body {
   
   button:hover {
     background-color: #0f3e3e;
+  }
+
+  .navbar {
+    z-index: 1000; /* o un valore superiore se necessario */
+    background-color: rgba(214, 218, 221, 0.8)
+    
+  }
+  .navbar .nav-link {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar .nav-link:hover {
+    background-color: #8ca4a4;
+  }
+  
+  .navbar .nav-link:focus {
+    background-color:  #8ca4a4;
+  }
+  footer {
+    background-color: #0f3e3e;
+    color: white;
+    text-align: center;
+    padding: 3%;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Applica l'animazione fadeIn al body */
+  body {
+    animation: fadeIn 1s ease-out;
   }

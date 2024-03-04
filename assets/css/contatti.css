@@ -88,3 +88,27 @@ body {
 body {
   animation: fadeIn 1s ease-out;
 }
+
+.contact-form:hover {
+  transform: scale(1.05); /* Aumenta la dimensione della card del 5% quando il cursore è sopra */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra leggera */
+}
+.contact-info:hover {
+  transform: scale(1.05); /* Aumenta la dimensione della card del 5% quando il cursore è sopra */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra leggera */
+}
+.navbar {
+  z-index: 1000; /* o un valore superiore se necessario */
+  background-color: rgba(214, 218, 221, 0.8)
+}
+.navbar .nav-link {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  background-color: #8ca4a4;
+}
+
+.navbar .nav-link:focus {
+  background-color:  #8ca4a4;
+}
