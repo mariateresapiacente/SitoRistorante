@@ -10,7 +10,7 @@
 
 
 .WelcomeBG {
-    background-image: url('../img/Immagine4.jpg'); /* Imposta l'immagine di sfondo */
+    background-image: url(/img/Immagine4.jpg); /* Imposta l'immagine di sfondo */
     background-size: cover; /* Copri l'intera area di .WelcomeBG */
     background-position: center; /* Centra l'immagine */
     background-repeat: no-repeat; /* Non ripetere l'immagine */
@@ -38,7 +38,7 @@
 body {
     width: 100%;
     background-color: rgb(252, 252, 252);
-    background-image: url(/assets/img/Immagine4.jpg);
+    background-image: url(/img/Immagine4.jpg);
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -69,6 +69,7 @@ body {
     padding: 0;
     padding: 0px 20px;
     border-color:#0f3e3e;
+   
 
 }
 
