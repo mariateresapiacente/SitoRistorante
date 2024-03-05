@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 document.getElementById("registrationForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
@@ -18,4 +20,4 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     document.getElementById("username").value = "";
     document.getElementById("password").value = "";
   });
- 
+});
