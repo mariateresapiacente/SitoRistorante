@@ -8,8 +8,8 @@ class Piatto {
 
     creaCard() {
         return `
-            <div class="card mb-3 col-md-6" style="max-width: 660px;justify-content-center">
-                <div class="row g-0">
+            <div class="card mb-3 col-md-6" style="max-width: 660px;">
+                <div class="row g-0" justify-content-center>
                     <div class="col-md-4 col-sm-12">
                         <img src="${this.immagine}" class="img-fluid rounded-start border border-warning border-2 " alt="${this.nome}">
                     </div>
