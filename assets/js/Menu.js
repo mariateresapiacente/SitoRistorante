@@ -8,9 +8,9 @@ class Piatto {
 
     creaCard() {
         return `
-            <div class="card mb-3 col-md-6" style="max-width: 660px;">
-                <div class="row g-0" justify-content-center>
-                    <div class="col-md-4 col-sm-12">
+            <div class="card  col-md-6 align-items-center justify-content-center" style="max-width: 660px; margin-left: 75px;">
+                <div class="row g-0 justify-content-center align-items-center ">
+                    <div class="col-md-4 col-sm-12 justify-content-center">
                         <img src="${this.immagine}" class="img-fluid rounded-start border border-warning border-2 " alt="${this.nome}">
                     </div>
                     <div class="col-md-8">

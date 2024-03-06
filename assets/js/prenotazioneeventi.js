@@ -1,5 +1,5 @@
 
-// Funzione per gestire il form di prenotazione
+// Funzione per gestire il form di prenotazione per l'evento "Serata di Degustazione di Champagne e Ostriche"
 function gestisciPrenotazione(event) {
   event.preventDefault();
 
@@ -7,10 +7,10 @@ function gestisciPrenotazione(event) {
   var nome = document.getElementById("nome").value;
   var cognome = document.getElementById("cognome").value;
   var email = document.getElementById("email").value;
-  var numeroPersone = document.getElementById("numero-persone").value;
+  var numeroPersone = parseInt(document.getElementById("numero-persone").value);
 
   // Verifica che tutti i campi siano stati compilati
-  if (nome === "" || cognome === "" || email === "" || numeroPersone === "") {
+  if (nome === "" || cognome === "" || email === "" || isNaN(numeroPersone)) {
     alert("Per favore, compila tutti i campi.");
     return;
   }
@@ -21,15 +21,12 @@ function gestisciPrenotazione(event) {
     return;
   }
 
-  // Crea un oggetto Prenotazione
-  var prenotazione = new Prenotazione(nome, cognome, email, numeroPersone);
+  // Calcola il prezzo totale
+  var prezzoPerPersona = 20; // Prezzo per persona dell'evento "Serata di Degustazione di Champagne e Ostriche"
+  var prezzoTotale = prezzoPerPersona * numeroPersone;
 
-  // Aggiungi la prenotazione al GestorePrenotazioni
-  var gestorePrenotazioni = new GestorePrenotazioni();
-  gestorePrenotazioni.aggiungiPrenotazione(prenotazione);
-
-  // Visualizza un messaggio di conferma
-  alert("Prenotazione effettuata con successo!");
+  // Visualizza un messaggio di conferma con l'evento e il prezzo totale
+  alert("Prenotazione effettuata con successo per l'evento 'Serata di Degustazione di Champagne e Ostriche'. Prezzo totale: " + prezzoTotale + "€");
 
   // Pulisci i campi di input
   document.getElementById("nome").value = "";
@@ -41,36 +38,3 @@ function gestisciPrenotazione(event) {
 // Aggiungi un event listener al form per chiamare la funzione gestisciPrenotazione quando viene inviato
 document.getElementById("prenotazione-form").addEventListener("submit", gestisciPrenotazione);
 
-// Classe Prenotazione
-class Prenotazione {
-  constructor(nome, cognome, email, numeroPersone) {
-    this.nome = nome;
-    this.cognome = cognome;
-    this.email = email;
-    this.numeroPersone = numeroPersone;
-  }
-}
-
-// Classe GestorePrenotazioni
-class GestorePrenotazioni {
-  constructor() {
-    // Ottieni le prenotazioni esistenti dal Local Storage
-    this.prenotazioni = JSON.parse(localStorage.getItem("prenotazioni")) || [];
-  }
-
-  // Metodo per aggiungere una prenotazione
-  aggiungiPrenotazione(prenotazione) {
-    this.prenotazioni.push(prenotazione);
-    this.salvaPrenotazioni();
-  }
-
-  // Metodo per salvare le prenotazioni nel Local Storage
-  salvaPrenotazioni() {
-    localStorage.setItem("prenotazioni", JSON.stringify(this.prenotazioni));
-  }
-
-  // Metodo per ottenere tutte le prenotazioni
-  getPrenotazioni() {
-    return this.prenotazioni;
-  }
-}
