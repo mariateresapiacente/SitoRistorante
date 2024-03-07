@@ -53,6 +53,7 @@ body {
     color: white;
     text-align: center;
     padding: 3%;
+    position:static;
   }
   .navbar {
     z-index: 1000; /* o un valore superiore se necessario */
@@ -85,4 +86,11 @@ body {
 /* Applica l'animazione fadeIn al body */
 body {
   animation: fadeIn 1s ease-out;
+}
+
+.social-media-icons a {
+  color: #ffffff; /* Cambia il colore del testo */
+  text-decoration:dotted; /* Rimuovi la sottolineatura */
+  margin-right: 10px; /* Aggiungi spazio a destra */
+  display: inline-block; /* Per allineare orizzontalmente */
 }

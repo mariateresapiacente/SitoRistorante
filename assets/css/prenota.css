@@ -84,3 +84,10 @@ body {
   body {
     animation: fadeIn 1s ease-out;
   }
+
+  .social-media-icons a {
+    color: #ffffff; /* Cambia il colore del testo */
+    text-decoration:dotted; /* Rimuovi la sottolineatura */
+    margin-right: 10px; /* Aggiungi spazio a destra */
+    display: inline-block; /* Per allineare orizzontalmente */
+  }

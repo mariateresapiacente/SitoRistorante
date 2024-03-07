@@ -38,7 +38,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   // Funzione per il logout
   function logout() {
     localStorage.removeItem("isLoggedIn"); // Rimuove lo stato di accesso memorizzato
-    window.location.href = "index.html"; // Reindirizza alla pagina principale
+    window.location.href = "Logineprenotazione.html"; // Reindirizza alla pagina principale
   }
 
   // Controlla lo stato di accesso e mostra/nasconde i link di login/logout
