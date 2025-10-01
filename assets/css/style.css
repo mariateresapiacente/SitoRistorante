@@ -10,7 +10,7 @@
 
 
 .WelcomeBG {
-    background-image: url(img/Immagine4.jpg); /* Imposta l'immagine di sfondo */
+    background-image: url(../../img/Immagine4.jpg); /* Imposta l'immagine di sfondo */
     background-size: cover; /* Copri l'intera area di .WelcomeBG */
     background-position: center; /* Centra l'immagine */
     background-repeat: no-repeat; /* Non ripetere l'immagine */
